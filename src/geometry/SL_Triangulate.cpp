@@ -24,6 +24,12 @@ void project(const double *R, const double *t, const double *M, double* m) {
 	m[1] = (R[3] * M[0] + R[4] * M[1] + R[5] * M[2] + t[1]) / zn;
 }
 
+void projectToCamFrame(const double* R, const double* t, const double M_from[3], double M_to[3]){
+	M_to[0] = R[0] * M_from[0] + R[1] * M_from[1] + R[2] * M_from[2] + t[0];
+	M_to[1] = R[3] * M_from[0] + R[4] * M_from[1] + R[5] * M_from[2] + t[1];
+	M_to[2] = R[6] * M_from[0] + R[7] * M_from[1] + R[8] * M_from[2] + t[2];
+}
+
 void project(const double* K, const double* R, const double* t, const double* M,
 		double* m) {
 	double zn = R[6] * M[0] + R[7] * M[1] + R[8] * M[2] + t[2];

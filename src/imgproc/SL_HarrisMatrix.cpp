@@ -2,7 +2,7 @@
  * SL_HarrisMatrix.cpp
  *
  *  Created on: Feb 13, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_HarrisMatrix.h"

@@ -1,8 +1,8 @@
 /*
- * SL_Geometry.h
+ * SLGeometry.h
  *
  *  Created on: Dec 15, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SLGEOMETRY_H_

@@ -2,7 +2,7 @@
  * SL_HarrisMatrix.h
  *
  *  Created on: Feb 13, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_HARRISMATRIX_H_

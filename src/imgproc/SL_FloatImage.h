@@ -2,7 +2,7 @@
  * SL_FloatImage.h
  *
  *  Created on: Dec 22, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_FLOATIMAGE_H_

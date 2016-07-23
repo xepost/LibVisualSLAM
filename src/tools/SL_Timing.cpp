@@ -2,7 +2,7 @@
  * SL_Timing.cpp
  *
  *  Created on: 2011-5-18
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_Timing.h"

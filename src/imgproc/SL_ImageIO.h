@@ -2,7 +2,7 @@
  * SL_ImageIO.h
  *
  *  Created on: Dec 22, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_IMAGEIO_H_
@@ -23,7 +23,7 @@ void loadPPM(ImgRGB& rgb_img, const char* fmtstr, ...);
 /*read image*/
 void imread(ImgG& gray_img, const char* fmtstr, ...);
 void imread(ImgRGB& rgb_img, const char* fmtstr, ...);
-void imwrite(const ImgG& gray_img, const char* fmtstr, ...);
-void imwrite(const ImgRGB& rgb_img, const char* fmtstr, ...);
+void imwrite(ImgG& gray_img, const char* fmtstr, ...);
+void imwrite(ImgRGB& rgb_img, const char* fmtstr, ...);
 
 #endif /* SL_IMAGEIO_H_ */

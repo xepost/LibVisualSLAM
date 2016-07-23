@@ -38,6 +38,7 @@ void invDistorParam(int w, int h, const double* iK, const double* kc, double* k_
  */
 void undistorNormPoints(const double* iK, const double* k_ud, int n, const double* a, double* an);
 void undistorPoint(const double* K, const double* k_ud, const double* pt, double * undistPt);
+void undistorPointNew(double* K, double* kc, double* x, double* x_undist);
 
 /*get the normalize image points pn = K^-1 p*/
 void normPoints(const double* iK, int n, const double* a, double *an);
@@ -49,4 +50,5 @@ void getInvK(const double* K, double* invK);
 void imagePoints(const double* K, int n, const double* an, double* a);
 void imagePoint(const double* K, const double* an, double* a);
 void imagePoints(const double* K, const double* kc, int n, const double* an, double* a);
+void imagePoint(const double* K , const double* kc , const double* an , double* a);
 #endif /* SL_DISTORTION_H_ */

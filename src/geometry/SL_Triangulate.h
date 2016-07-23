@@ -33,6 +33,9 @@ inline void project(const double* P, const double* M, double* m) {
 	m[1] = (P[4] * M[0] + P[5] * M[1] + P[6] * M[2] + P[7]) / m[1];
 }
 void project(const double* R, const double* t, const double* M, double* m);
+
+void projectToCamFrame(const double* R, const double* t, const double M_from[3], double M_to[3]);
+
 void project(const double* K, const double* R, const double* t, const double* M,
 		double* m);
 void project(const double* K, const double* kc, const double* R,
@@ -162,7 +165,7 @@ void getProjectionCovMat(const double* K, const double* R, const double* t,
 bool isAtCameraBack(const double* R, const double* t, const double x[]);
 
 /* Sequantial triangulation. 
- * When a new image point is coming, the 3D coordinates of 3D map point can be updated, together with the covarianc
+ * When a new image point is coming, the 3D coordinates of 3D map point can be updated, together with the covariance
  * K,R,t : parameters of incoming camera pose
  * m : incoming image point
  * M [in/out] : [old/updated]3D position of map point

@@ -2,7 +2,7 @@
  * SL_ImageIO.cpp
  *
  *  Created on: Dec 22, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_ImageIO.h"
@@ -259,13 +259,13 @@ void imread(ImgRGB& rgb_img, const char* fmtstr, ...) {
 	memcpy(rgb_img.data, cvBGR.data,
 			sizeof(uchar) * cvBGR.cols * cvBGR.rows * 3);
 }
-void imwrite(const ImgG& gray_img, const char* fmtstr, ...) {
+void imwrite(ImgG& gray_img, const char* fmtstr, ...) {
 	char file_path[1024];
 	GET_FMT_STR(fmtstr, file_path);
 	cv::Mat cvImg(gray_img.h, gray_img.w, CV_8UC1, gray_img.data);
 	cv::imwrite(file_path, cvImg);
 }
-void imwrite(const ImgRGB& rgb_img, const char* fmtstr, ...) {
+void imwrite(ImgRGB& rgb_img, const char* fmtstr, ...) {
 	char file_path[1024];
 	GET_FMT_STR(fmtstr, file_path);
 	cv::Mat cvImg(rgb_img.h, rgb_img.w, CV_8UC3, rgb_img.data);

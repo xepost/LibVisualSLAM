@@ -11,6 +11,7 @@
 #include <cmath>
 
 double maxRangeNormPlane(int w , int h , const double* iK) {
+
 	double r_maxw1 = fabs(iK[2]);
 	double r_maxw2 = fabs(w * iK[0] + h * iK[1] + iK[2]);
 	double r_maxw = r_maxw1 > r_maxw2 ? r_maxw1 : r_maxw2;
@@ -31,16 +32,15 @@ void invDistorParam(double r , const double *kc , double *k_ud) {
 	double *A = new double[num_eqns * num_vars];
 	double *b = new double[num_eqns];
 
-	//fit the curve
 	for (int i = 0; i < NUM_SAMPLES; i++) {
 
 		double t = i * r / (NUM_SAMPLES - 1);
 
-		double t2 = t * t;
-		double t3 = t2 * t;
-		double t5 = t3 * t2;
-		double t7 = t5 * t2;
-		double t1 = t + kc[0] * t3 + kc[1] * t5 + kc[4] * t7;
+		double tt = t * t;
+		double ttt = tt * t;
+		double ttttt = ttt * tt;
+		double ttttttt = ttttt * tt;
+		double t1 = t + kc[0] * ttt + kc[1] * ttttt + kc[4] * ttttttt;
 
 		double tmp = t1;
 		for (int j = 0; j < num_vars; j++) {
@@ -143,6 +143,51 @@ void undistorPoint(const double* K , const double* k_ud , const double* pt , dou
 	}
 	imagePoint(K, ptNorm, undisPt);
 }
+
+void undistorPointNew(double* K, double* kc, double* x, double* x_undist){
+	double invK[9];
+	double xn[2];
+	getInvK(K, invK);
+	normPoint(invK, x[0], x[1], xn[0], xn[1]);
+    /*
+	k1 = k(1);
+    k2 = k(2);
+    k3 = k(5);
+    p1 = k(3);
+    p2 = k(4);
+
+    x = xd; 				% initial guess
+
+    for kk=1:20,
+
+        r_2 = sum(x.^2);
+        k_radial =  1 + k1 * r_2 + k2 * r_2.^2 + k3 * r_2.^3;
+        delta_x = [2*p1*x(1,:).*x(2,:) + p2*(r_2 + 2*x(1,:).^2);
+        p1 * (r_2 + 2*x(2,:).^2)+2*p2*x(1,:).*x(2,:)];
+        x = (xd - delta_x)./(ones(2,1)*k_radial);
+
+    end;
+    */
+	double k1 = kc[0];
+	double k2 = kc[1];
+	double k3 = kc[4];
+	double p1 = kc[2];
+	double p2 = kc[3];
+	double x_temp[2];
+	x_temp[0] = xn[0];
+	x_temp[1] = xn[1];
+	for (int i = 0; i < 20; i++){
+		double r_2 = pow(x_temp[0], 2) + pow(x_temp[1], 2);
+		double k_radial =  1 + k1 * r_2 + k2 * r_2 * r_2 + k3 * pow(r_2, 3);
+		double delta_x[2];
+		delta_x[0] = 2*p1*x_temp[0]*x_temp[1] + p2*(r_2 + 2*x_temp[0] * x_temp[0]);
+		delta_x[1] = p1* (r_2 + 2*x_temp[1] * x_temp[1])+2*p2*x_temp[0]*x_temp[1];
+		x_temp[0] = (xn[0] - delta_x[0]) / k_radial;
+		x_temp[1] = (xn[1] - delta_x[1]) / k_radial;
+	}
+	imagePoint(K, x_temp, x_undist);
+}
+
 void normPoints(const double* iK , int n , const double* a , double *an) {
 	int i;
 	const double* pa = a;
@@ -212,6 +257,31 @@ void imagePoint(const double* K , const double* an , double* a) {
 	double z = K[8];
 	double x = (xn * K[0] + yn * K[1] + K[2]) / z;
 	double y = (yn * K[4] + K[5]) / z;
+
+	a[0] = x;
+	a[1] = y;
+}
+
+
+void imagePoint(const double* K , const double* kc , const double* an , double* a) {
+	double xn = an[0];
+	double yn = an[1];
+
+	double r = sqrt(xn * xn + yn * yn);
+	double rr = r * r;
+	double rrrr = rr * rr;
+	double rrrrrr = rrrr * rr;
+
+	double factor_a = (1 + kc[0] * rr + kc[1] * rrrr + kc[4] * rrrrrr);
+	double factor_bx = 2 * kc[2] * xn * yn + kc[3] * (rr + 2 * xn * xn);
+	double factor_by = kc[2] * (rr + 2 * yn * yn) + 2 * kc[3] * xn * yn;
+
+	double xnd = xn * factor_a + factor_bx;
+	double ynd = yn * factor_a + factor_by;
+
+	double z = K[8];
+	double x = (K[0] * xnd + K[1] * ynd + K[2]) / z;
+	double y = (K[4] * ynd + K[5]) / z;
 
 	a[0] = x;
 	a[1] = y;

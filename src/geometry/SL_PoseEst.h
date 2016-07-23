@@ -2,7 +2,7 @@
  * SL_PoseEst.h
  *
  *  Created on: 2011-8-9
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_POSEEST_H_

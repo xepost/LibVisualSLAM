@@ -2,7 +2,7 @@
  * SL_RigidTransform.cpp
  *
  *  Created on: 2011-6-9
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_RigidTransform.h"

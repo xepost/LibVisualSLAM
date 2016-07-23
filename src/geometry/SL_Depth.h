@@ -2,7 +2,7 @@
  * SL_Depth.h
  *
  *  Created on: Feb 14, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_DEPTH_H_

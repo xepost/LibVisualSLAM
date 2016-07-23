@@ -81,12 +81,9 @@ public:
 	void matchSURFPoints(const ImgG& img1, const ImgG& img2);
 	void setMatchedPoints(const Mat_d& pts1, const Mat_d& pts2);
 	void getInlierInd(std::vector<int>& ind);
-	void getInlierFlag(Mat_uc& inFlag){
-		inFlag.cloneFrom(inlierFlag);
-	}
 	
 	int estimateEMatOld(double maxEpiErr = 3.0, int method = FF_RANSAC);
-	int estimateEMat(double maxEpiErr = 6.0);
+	int estimateEMat(double maxEpiErr = 3.0);
 	void outputInlierPoints(Mat_d& pts1, Mat_d& pts2);
 	void outputInlierNormPoints(Mat_d& normPts1, Mat_d& normPts2);
 	void outputRTs(Mat_d& R1, Mat_d& t1, Mat_d& R2, Mat_d& t2, bool all = false);

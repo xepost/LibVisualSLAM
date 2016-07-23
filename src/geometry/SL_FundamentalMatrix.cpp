@@ -14,7 +14,6 @@
 #define Vy(v) (v)[1]
 #define Vz(v) (v)[2]
 
-/* m2^T*F*m1*/
 double epipolarError(const double F[9], const double m2[2], const double m1[2]) {
 	double Fl[3], Fr[3], pt;
 

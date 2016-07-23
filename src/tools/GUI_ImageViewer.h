@@ -24,7 +24,7 @@ void imshow(const char* name, int w, int h, const uchar* data,
 		bool gray = true);
 template<class T>
 void imshow(const char* name, int m, int n, const T* data, T minval,
-		double maxval) {
+		T maxval) {
 	ImgG gray(n, m);
 	mat2Img(n, m, data, gray, minval, maxval);
 	imshow(name, gray);

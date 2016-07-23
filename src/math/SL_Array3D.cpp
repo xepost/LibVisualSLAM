@@ -2,7 +2,7 @@
  * SL_Array3D.cpp
  *
  *  Created on: Jul 14, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 #include "math/SL_Array3D.h"
 #include <cstdlib>

@@ -2,7 +2,7 @@
  * SL_SparseMat.cpp
  *
  *  Created on: 2011-6-14
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_SparseMat.h"

@@ -2,7 +2,7 @@
  * SL_Timing.h
  *
  *  Created on: 2011-5-18
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_TIMING_H_

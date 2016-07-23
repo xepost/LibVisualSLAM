@@ -2,7 +2,7 @@
  * SL_RigidTransform.h
  *
  *  Created on: 2011-6-9
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_RIGIDTRANSFORM_H_

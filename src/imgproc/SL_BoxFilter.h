@@ -2,7 +2,7 @@
  * SL_BoxFilter.h
  *
  *  Created on: Dec 18, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_BOXFILTER_H_

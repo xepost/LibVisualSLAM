@@ -2,7 +2,7 @@
  * SL_SparseMat.h
  *
  *  Created on: 2011-6-14
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_SPARSEMAT_H_

@@ -2,7 +2,7 @@
  * SL_Depth.cpp
  *
  *  Created on: Feb 14, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_Depth.h"

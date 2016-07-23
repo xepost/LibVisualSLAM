@@ -2,7 +2,7 @@
  * SL_Graph.h
  *
  *  Created on: 2011-7-6
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_GRAPH_H_

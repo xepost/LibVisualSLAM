@@ -2,7 +2,7 @@
  * SL_Math.h
  *
  *  Created on: Dec 22, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_MATH_H_

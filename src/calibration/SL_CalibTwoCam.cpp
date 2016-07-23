@@ -188,6 +188,15 @@ int CalibTwoCam::estimateEMat(double maxEpiErr){
 	memcpy(F,matF.data,sizeof(double)*9);
 
 	int nInliers = getInlierFMatches(orgPts2, orgPts1, matF, maxEpiErr, inlierFlag);
+
+	//findEMatRansac(iK1, iK2, n, orgPts1.data, orgPts2.data, normPts1.data,normPts2.data, E, nRansac, maxEpiErr);
+	//
+	//Mat_d matF(3,3);
+	//getFMatK(K1, K2, E,matF.data);
+	//memcpy(F,matF.data,sizeof(double)*9);
+	//int nInliers = getInlierFMatches(orgPts1, orgPts2, matF, maxEpiErr, inlierFlag);
+	
+	//std::cout << "inliers:" << nInliers << " total:" << n << std::endl;
 	return nInliers;
 }
 void CalibTwoCam::outputInlierPoints(Mat_d& pts1, Mat_d& pts2) {

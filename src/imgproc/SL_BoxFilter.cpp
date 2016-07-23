@@ -2,7 +2,7 @@
  * SL_BoxFilter.cpp
  *
  *  Created on: Dec 18, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_BoxFilter.h"

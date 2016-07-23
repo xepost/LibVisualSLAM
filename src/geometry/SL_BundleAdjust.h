@@ -2,14 +2,14 @@
  * SL_BundleAdjust.h
  *
  *  Created on: 2011-7-12
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_BUNDLEADJUST_H_
 #define SL_BUNDLEADJUST_H_
 #include "math/SL_Matrix.h"
-#include "SL_Point.h"
-#include "SL_BundleHelper.h"
+#include "geometry/SL_Point.h"
+#include "geometry/SL_BundleHelper.h"
 
 #include <utility>
 #include <vector>

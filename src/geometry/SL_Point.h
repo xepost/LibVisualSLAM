@@ -71,7 +71,7 @@ public:
 	Point3() {
 	}
 	Point3(const Point3& other) :
-			x(other.x), y(other.y), z(other.z){
+			x(other.x), y(other.y), z(other.z) {
 	}
 	Point3(T x0, T y0, T z0) {
 		set(x0, y0, z0);

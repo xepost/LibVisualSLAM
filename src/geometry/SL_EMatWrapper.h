@@ -2,7 +2,7 @@
  * SL_EMatWrapper.h
  *
  *  Created on: 2011-7-2
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_EMATWRAPPER_H_

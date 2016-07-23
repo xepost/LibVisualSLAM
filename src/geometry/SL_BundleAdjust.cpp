@@ -2,7 +2,7 @@
  * SL_BundleAdjust.cpp
  *
  *  Created on: 2011-7-12
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_BundleAdjust.h"

@@ -2,7 +2,7 @@
  * SL_Gradient.h
  *
  *  Created on: Feb 13, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_GRADIENT_H_

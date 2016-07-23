@@ -2,7 +2,7 @@
  * SL_SparseLinearSystem.h
  *
  *  Created on: 2011-6-15
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_SPARSELINEARSYSTEM_H_

@@ -2,7 +2,7 @@
  * SL_EssentialMatWrapper.cpp
  *
  *  Created on: 2011-7-2
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_EMatWrapper.h"

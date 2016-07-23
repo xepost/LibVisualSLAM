@@ -2,7 +2,7 @@
  * SL_ConvexHull2D.cpp
  *
  *  Created on: Feb 19, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_ConvexHull2D.h"

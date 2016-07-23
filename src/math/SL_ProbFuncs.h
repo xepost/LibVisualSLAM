@@ -2,7 +2,7 @@
  * SL_ProbFuncs.h
  *
  *  Created on: 2011-10-20
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef PROBFUNCS_H_

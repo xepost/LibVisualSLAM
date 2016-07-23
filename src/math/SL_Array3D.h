@@ -2,7 +2,7 @@
  * SL_Arrary3D.h
  *
  *  Created on: Jul 14, 2012
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_ARRARY3D_H_

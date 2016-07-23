@@ -2,7 +2,7 @@
  * SL_Utility.h
  *
  *  Created on: 2011-6-14
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #ifndef SL_UTILITY_H_

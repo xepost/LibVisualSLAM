@@ -66,7 +66,6 @@ void drawReprojectedPoints(const ImgG& img, const double* K, const double* kc,
 
 void drawPoint(const ImgG& img, const double x, const double y, ImgRGB& outImg,
 		int radius, uchar r, uchar g, uchar b, double thickness = 1);
-
 void drawPoint(ImgRGB& outImg, const double x, const double y, int radius,
 		uchar r, uchar g, uchar b, double thickness = 1);
 void drawLine(ImgRGB& outImg, double l[], uchar r, uchar g, uchar b);

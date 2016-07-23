@@ -2,7 +2,7 @@
  * SL_PoseEst.cpp
  *
  *  Created on: 2011-8-9
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_PoseEst.h"

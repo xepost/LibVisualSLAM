@@ -2,7 +2,7 @@
  * SL_SparseLinearSystem.cpp
  *
  *  Created on: 2011-6-15
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_SparseLinearSystem.h"

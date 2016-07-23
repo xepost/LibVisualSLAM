@@ -2,7 +2,7 @@
  * SL_ProbFuncs.cpp
  *
  *  Created on: 2011-10-20
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_ProbFuncs.h"

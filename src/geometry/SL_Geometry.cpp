@@ -1,8 +1,8 @@
 /*
- * SL_Geometry.cpp
+ * SLGeometry.cpp
  *
  *  Created on: Dec 15, 2011
- *      Author: Danping Zou
+ *      Author: tsou
  */
 
 #include "SL_Geometry.h"

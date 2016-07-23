@@ -6,6 +6,9 @@ set (libVisualSLAM_VERSION_MAJOR 1)
 set (libVisualSLAM_VERSION_MINOR 0)
 
 
+set(CUSTOM_OPENCV_DIR "/home/jacob/opencv-2.4.10.1/install")
+find_package(OpenCV REQUIRED PATHS ${CUSTOM_OPENCV_DIR} NO_DEFAULT_PATH)
+
 aux_source_directory(src SRC)
 aux_source_directory(src/calibration SRC_CALIBRATION)
 aux_source_directory(src/extern SRC_EXTERN)
@@ -28,6 +31,10 @@ aux_source_directory(src/util SRC_UTIL)
 include_directories(src)
 
 add_library(VisualSLAM ${SRC} ${SRC_CALIBRATION} ${SRC_EXTERN} ${SRC_SBA} ${SRC_CSPARSE} ${SRC_LEVMAR} ${SRC_GEOMETRY} ${SRC_IMGPROC} ${SRC_LAP} ${SRC_MATCHING} ${SRC_MATH} ${SRC_TOOLS} ${SRC_UTIL})
+
+target_link_libraries(VisualSLAM
+  ${OpenCV_LIBRARIES}
+)
 
 install (TARGETS VisualSLAM DESTINATION lib)
 FILE(GLOB headers_calibration "src/calibration/*.h")
